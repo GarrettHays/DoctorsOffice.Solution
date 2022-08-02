@@ -23,6 +23,6 @@ else
   </ul>
 }
 
-<p>@Html.ActionLink("Back to Specialties", "Index")</p>
-<p>@Html.ActionLink("Edit Specialty", "Edit", new { id = Model.SpecialtyId })</p>
-<p>@Html.ActionLink("Delete Specialty", "Delete", new { id = Model.SpecialtyId })</p>
+<p>@Html.ActionLink("Back to Specialties", "Index",null, null, new { @class = "btn btn-primary btn-primary:hover"})
+@Html.ActionLink("Edit Specialty", "Edit", null, new { id = Model.SpecialtyId }, new { @class = "btn btn-primary btn-primary:hover"})
+@Html.ActionLink("Delete Specialty", "Delete", null, new { id = Model.SpecialtyId }, new { @class = "btn btn-primary btn-primary:hover"})</p>
