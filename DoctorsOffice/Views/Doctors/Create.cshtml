@@ -8,12 +8,12 @@
 
 @using (Html.BeginForm())
 {
-  @Html.LabelFor(model => model.Name)
+  @Html.LabelFor(model => model.Name, "Name:")
   @Html.TextBoxFor(model => model.Name)
-
-  @Html.Label("Select Specialty")
+  <br>
+  @Html.Label("Select Specialty", "Select Specialty:")
   @Html.DropDownList("SpecialtyId")
-
-  <input type="submit" value="Add new Doctor" class="btn btn-default" />
+  <br>
+  <input type="submit" value="Add new Doctor" class="btn btn-primary btn-primary:hover" />
 }
-<p>@Html.ActionLink("Show all Doctors", "Index")</p>
+<p>@Html.ActionLink("Show all Doctors", "Index",null, null, new { @class = "btn btn-primary btn-primary:hover"})</p>
