@@ -42,16 +42,15 @@ else
     @using (Html.BeginForm("DeletePatient", "Doctors"))
     {
       @Html.Hidden("joinId", @join.DoctorPatientId)
-      <input type="submit" value="Delete"/>
+      <input type="submit" value="Delete" class="btn btn-primary btn-primary:hover"/>
     }
   }
   </ul>
 }
 
-<p>@Html.ActionLink("Add a Specialty", "AddSpecialty", new { id = Model.DoctorId })</p>
+<p>@Html.ActionLink("Add a Specialty", "AddSpecialty", null, new { id = Model.DoctorId }, new { @class = "btn btn-primary btn-primary:hover"})
+@Html.ActionLink("Add a Patient", "Create", "Patients", null, new { @class = "btn btn-primary btn-primary:hover"})</p>
 
-<p>@Html.ActionLink("Add a Patient", "Create", "Patients")</p>
-
-<p>@Html.ActionLink("Back to list", "Index")</p>
-<p>@Html.ActionLink("Edit Doctor", "Edit", new { id = Model.DoctorId })</p>
-<p>@Html.ActionLink("Delete Doctor", "Delete", new { id = Model.DoctorId })</p>
+<p>@Html.ActionLink("Edit Doctor", "Edit", null, new { id = Model.DoctorId }, new { @class = "btn btn-primary btn-primary:hover"})
+@Html.ActionLink("Delete Doctor", "Delete", null, new { id = Model.DoctorId }, new { @class = "btn btn-primary btn-primary:hover"})
+@Html.ActionLink("Back to list", "Index",null, null, new { @class = "btn btn-primary btn-primary:hover"})</p>
